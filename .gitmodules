@@ -1,0 +1,12 @@
+[submodule "lsqlite3"]
+	path = lsqlite3
+	url = https://github.com/jesrui/lsqlite3-git-mirror
+[submodule "sqlite"]
+	path = sqlite
+	url = https://github.com/sqlite/sqlite
+[submodule "lua"]
+	path = lua
+	url = https://github.com/lua/lua
+[submodule "luastatic"]
+	path = luastatic
+	url = https://github.com/jesrui/luastatic
