@@ -1,0 +1,19 @@
+LUA_HOME ?= ../lua
+LUA ?= $(LUA_HOME)/src/lua
+# compiled with msys2 gcc
+LIBLUA_A = $(LUA_HOME)/liblua.a
+LUA_INCLUDE ?= $(LUA_HOME)
+
+
+CFLAGS=-DLSQLITE_VERSION=\"0.9.5\" -c -I$(LUA_INCLUDE) 
+
+
+liblsqlite3.a: lsqlite3.o
+	ar rcs $@ $^
+	ranlib $@
+
+.PHONY: clean
+
+
+clean:
+	$(RM) lsqlite3.o liblsqlite3.a
