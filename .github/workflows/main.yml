@@ -19,3 +19,12 @@ jobs:
       - name: CI-Build
         run: |
           mingw32-make.exe
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: 'true'
+      - name: CI-Build
+        run: |
+          make
